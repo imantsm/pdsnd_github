@@ -30,3 +30,6 @@ https://stackoverflow.com/questions/35364601/group-by-and-find-top-n-value-count
 
 To learn how to use timedelta, I used the following page:
 https://docs.python.org/2/library/datetime.html#module-datetime
+
+To learn how to cache my github credentials, I used the following stackoverflow page:
+https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
