@@ -1,0 +1,63 @@
+Start Station               End Station                                    
+10th & E St NW              10th St & L'Enfant Plaza SW                         1
+                            11th & Kenyon St NW                                 1
+                            14th & Irving St NW                                 1
+                            14th St & New York Ave NW                           1
+                            14th St & Spring Rd NW                              1
+                            15th & East Capitol St NE                           1
+                            15th & Euclid St  NW                                1
+                            15th & K St NW                                      1
+                            15th & W St NW                                      1
+                            16th & Harvard St NW                                1
+                            17th & K St NW                                      1
+                            18th & Monroe St NE                                 1
+                            19th & G St NW                                      1
+                            19th & K St NW                                      1
+                            1st & Rhode Island Ave NW                           1
+                            20th & L St NW                                      1
+                            20th St & Florida Ave NW                            1
+                            20th St & Virginia Ave NW                           1
+                            2nd St & Seaton Pl NE                               1
+                            34th & Water St NW                                  1
+                            34th St & Wisconsin Ave NW                          1
+                            4th & W St NE                                       1
+                            6th & K St NE                                       1
+                            6th & Water St SW / SW Waterfront                   1
+                            8th & Eye St SE / Barracks Row                      1
+                            Calvert St & Woodley Pl NW                          1
+                            Columbia Pike & S Courthouse Rd                     1
+                            Georgia & New Hampshire Ave NW                      1
+                            Lee Hwy & N Scott St                                1
+                            Lynn & 19th St North                                1
+                                                                               ..
+Yuma St & Tenley Circle NW  36th & Calvert St NW / Glover Park                  1
+                            37th & O St NW / Georgetown University              1
+                            39th & Veazey St NW                                 1
+                            5th St & Massachusetts Ave NW                       1
+                            Adams Mill & Columbia Rd NW                         1
+                            C & O Canal & Wisconsin Ave NW                      1
+                            Fessenden St & Wisconsin Ave NW                     1
+                            Georgia Ave and Fairmont St NW                      1
+                            Henry Bacon Dr & Lincoln Memorial Circle NW         1
+                            Park Rd & Holmead Pl NW                             1
+                            Rosslyn Metro / Wilson Blvd & Ft Myer Dr            1
+                            Calvert St & Woodley Pl NW                          2
+                            Connecticut Ave & Tilden St NW                      2
+                            Harvard St & Adams Mill Rd NW                       2
+                            Wisconsin Ave & Ingomar St NW                       2
+                            Wisconsin Ave & O St NW                             2
+                            Wisconsin Ave & Brandywine St NW                    3
+                            34th St & Wisconsin Ave NW                          4
+                            39th & Calvert St NW / Stoddert                     4
+                            Connecticut & Nebraska Ave NW                       4
+                            Massachusetts Ave & Dupont Circle NW                5
+                            Van Ness Metro / UDC                                5
+                            3000 Connecticut Ave NW / National Zoo              6
+                            Ripley & Bonifant St                                6
+                            Tenleytown / Wisconsin Ave & Albemarle St NW        6
+                            19th St & Pennsylvania Ave NW                       7
+                            Ward Circle / American University                   7
+                            Connecticut Ave & Newark St NW / Cleveland Park    13
+                            Connecticut Ave & Yuma St NW                       14
+                            Wisconsin Ave & Newark St NW                       20
+Name: End Station, Length: 40758, dtype: int64
