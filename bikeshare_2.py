@@ -63,7 +63,7 @@ def get_filters():
 
     # get user input for month (all, january, february, ... , june)
     correct_input = False
-    print('Okay, now we need to know what month you\'re looking to filter for.')
+    print('Okay, now we need to know what month you are looking to filter for.')
     while correct_input == False:
         valid_input = False
         while valid_input == False:
@@ -96,7 +96,7 @@ def get_filters():
     print('\nExcellent. Thank you for making your selection.\n')
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    print('Okay, now we need to know what day of the week you\'re looking to filter for.')
+    print('Okay, now we need to know what day of the week you are looking to filter for.')
     correct_input = False
     while correct_input == False:
         valid_input = False
@@ -104,8 +104,8 @@ def get_filters():
             integer_input = False # This variable is used to keep track of whether the user has input an integer
             while integer_input == False:
                 try:
-                    print('For what day of the week would you like to filter? Please enter a number that corresponds to your day of choice.')
-                    print('1 for Monday, 2 for Tuesday, etc. Please enter 0 if you would like to select all days of the week.')
+                    print('For what day of the week would you like to filter? Enter a number that corresponds to your day of choice.')
+                    print('1 for Monday, 2 for Tuesday, etc. Enter 0 if you would like to select all days of the week.')
                     day = int(input('Please enter your selection here: '))
                     integer_input = True
                 except:
@@ -300,7 +300,7 @@ def raw_data(df):
                 display_counter += 5
             else: continue_display = False
         except:
-            print('It looks like this thing has gone as far as it\'s going to go.')
+            print('It looks like this thing has gone as far as it is going to go.')
             continue_display = False
 
 def main():
