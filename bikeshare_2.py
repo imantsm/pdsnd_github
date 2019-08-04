@@ -2,7 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 import calendar
-from datetime import timedelta #using timedelta to show the user how else seconds can be represented
+from datetime import timedelta # using timedelta to show the user how else seconds can be represented
 
 
 CITY_DATA = { 'chicago': 'chicago.csv',
@@ -33,7 +33,7 @@ def get_filters():
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     correct_input = False #this will be used to confirm with the user that they have selected the city that they want.
     while correct_input == False:
-        valid_input = False #this variable will keep the while loop running until the user enters valid inputs
+        valid_input = False # this variable will keep the while loop running until the user enters valid inputs
         while valid_input == False:
             print('Please select the city that you would like to explore.')
             print('Make your selection by entering the letter that corresponds to your city of choice (indicated by the brackets).')
@@ -50,7 +50,7 @@ def get_filters():
             else: invalid_input()
         print('Thank you for making your selection.')
         valid_input = False
-        while valid_input == False: #checks with the user to double-check that they made they right selection
+        while valid_input == False: # checks with the user to double-check that they made they right selection
             print('You have selected {}.'.format(city.title()))
             is_correct = input('Is this correct? [Y]es or [N]o: ').title()
             if is_correct == 'Y':
@@ -67,7 +67,7 @@ def get_filters():
     while correct_input == False:
         valid_input = False
         while valid_input == False:
-            integer_input = False #This variable is used to keep track of whether the user has input an integer
+            integer_input = False # This variable is used to keep track of whether the user has input an integer
             while integer_input == False:
                 try:
                     print('For what month would you like to filter? Please enter a number that corresponds to your month of choice.')
@@ -82,7 +82,7 @@ def get_filters():
             else:
                 invalid_input()
         valid_input = False
-        while valid_input == False: #checks with the user to see if the month that they selected is the one that they want
+        while valid_input == False: # checks with the user to see if the month that they selected is the one that they want
             if month != 0:
                 print('You have selected {} ({})'.format(month, calendar.month_name[month]))
             else: print('You have seleced 0 (All months).')
@@ -101,7 +101,7 @@ def get_filters():
     while correct_input == False:
         valid_input = False
         while valid_input == False:
-            integer_input = False #This variable is used to keep track of whether the user has input an integer
+            integer_input = False # This variable is used to keep track of whether the user has input an integer
             while integer_input == False:
                 try:
                     print('For what day of the week would you like to filter? Please enter a number that corresponds to your day of choice.')
@@ -116,7 +116,7 @@ def get_filters():
             else:
                 invalid_input()
         valid_input = False
-        while valid_input == False: #checks with the user to make sure that they made the input that they wanted
+        while valid_input == False: # checks with the user to make sure that they made the input that they wanted
             if day != 0:
                 print('You have selected {} ({}).'.format(day, calendar.day_name[day-1]))
             else: print('You have selected 0 (All days).')
@@ -143,7 +143,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    #load the main csv file
+    # load the main csv file
     df = pd.read_csv(CITY_DATA[city])
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
@@ -154,12 +154,12 @@ def load_data(city, month, day):
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     df['hour'] = df['Start Time'].dt.hour
 
-    #filter by month, if applicable
+    # filter by month, if applicable
     if month != 0:
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
 
-    #filter by day, if applicable
+    # filter by day, if applicable
     if day != 0:
         # filter by day to create the new DataFrame
         df = df[df['day_of_week'] == calendar.day_name[day-1]]
@@ -224,10 +224,10 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # display total travel time
-    #print(df.head())
+    # print(df.head())
     total_trip = df['Trip Duration'].sum()
     print('The total travel time for all users, per your filter, was {} seconds.'.format(total_trip))
-    #print('This equates to {} '.format(timedelta(0, total_trip)))
+    # print('This equates to {} '.format(timedelta(0, total_trip)))
 
     # display mean travel time
     avg_trip = df['Trip Duration'].mean()
@@ -271,7 +271,7 @@ def raw_data(df):
     df: DataFrame.  This is the input DataFrame
     """
 
-    valid_input = False #this variable will keep the while loop running until the user enters valid inputs
+    valid_input = False # this variable will keep the while loop running until the user enters valid inputs
     while valid_input == False:
         print('Would you like to see the raw data?')
         selection = input('[Y]es or [N]o: ').title()
@@ -285,11 +285,11 @@ def raw_data(df):
         display_counter = 0
     else: continue_display = False
 
-    while continue_display == True: #this loop will continue to display the raw data, 5 items at a time, until such time that the user decides that they don't want to continue.
-        try:  #This will hopefully kick the user out of the while loop and continue with the program if the for loop below start to go out of bounds
+    while continue_display == True: # this loop will continue to display the raw data, 5 items at a time, until such time that the user decides that they don't want to continue.
+        try:  # This will hopefully kick the user out of the while loop and continue with the program if the for loop below start to go out of bounds
             for i in range(display_counter, display_counter+5):
                 print(df.iloc[i])
-            valid_input = False #this variable will keep the while loop running until the user enters valid inputs
+            valid_input = False # this variable will keep the while loop running until the user enters valid inputs
             while valid_input == False:
                 print('\nWould you like to continue viewing the raw data?')
                 selection = input('[Y]es or [N]o: ').title()
@@ -305,16 +305,16 @@ def raw_data(df):
 
 def main():
     while True:
-        #clear the screen
+        # clear the screen
         print("\033[H\033[J")
 
-        #this gets the data from the user
+        # this gets the data from the user
         city, month, day = get_filters()
 
-        #this gets the DataFrame per the user's filter paramenters
+        # this gets the DataFrame per the user's filter paramenters
         df = load_data(city, month, day)
 
-        if df.empty == False: #this checks to make sure that the DataFrame isn't empty
+        if df.empty == False: # this checks to make sure that the DataFrame isn't empty
             time_stats(df, month, day)
             station_stats(df)
             trip_duration_stats(df)
@@ -322,8 +322,8 @@ def main():
             raw_data(df)
         else: print('Unfortunately, your filter did not return any results.\n')
 
-        #see if the user wants to start over
-        valid_input = False #this variable will keep the while loop running until the user enters valid inputs
+        # see if the user wants to start over
+        valid_input = False # this variable will keep the while loop running until the user enters valid inputs
         while valid_input == False:
             print('Would you like to restart?')
             restart = input('[Y]es or [N]o: ').title()
@@ -336,6 +336,6 @@ def main():
             break
 
 
-#this checks to make sure that this script is being run as the main program
+# this checks to make sure that this script is being run as the main program
 if __name__ == "__main__":
 	main()
